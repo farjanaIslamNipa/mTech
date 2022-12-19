@@ -14,6 +14,10 @@ const ProductCard = ({ product }) => {
           <img src={product.image} className="img-fluid" alt="" />
         </div>
         <h5 className="text-center text-info mb-3">{product.model}</h5>
+        {
+          pathname.includes("cart") && 
+        <h6 className="text-center">Quantity <span className='text-success'>{product.quantity}</span></h6>
+        }
         <h6 className="text-center">Rating:<span className='text-danger ps-2'>{product.rating}</span></h6>
         <ul>
           {

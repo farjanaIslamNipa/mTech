@@ -9,7 +9,7 @@ const cart = useSelector(state => state.cart)
       <h2 className="text-center fw-bold pt-5 pb-4">Cart Products</h2>
       <div className="row">
         {
-          cart.map(product => <ProductCard key={product.id} product={product} />)
+          cart.sort((a, b) => a.id - b.id).map(product => <ProductCard key={product.id} product={product} />)
         }
       </div>
     </div>
